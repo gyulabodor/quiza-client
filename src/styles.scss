@@ -1,13 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @use '@angular/material' as mat;
-@include mat.core()
+@include mat.core();
 
 $dark-primary-palette: mat.define-palette(mat.$indigo-palette);
+$dark-primary-palette:mat.define-palette(mat.$pink-palette);
 $accent-platte: mat.define-palette(mat.$pink-palette);
-
+$quiza-ng-app-theme: //  theme-type:-moz-lwtheme-darktext);
+  mat.define-palette('#1A1B1CFF'));
+));
 $quiza-ng-app-theme:
   mat.define-palette(rgb(34, 35, 39))
-  theme-type:-moz-lwtheme-darktext);
+theme-type:-moz-lwtheme-darktext);
 ));
 
 * {
