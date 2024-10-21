@@ -1,6 +1,6 @@
-import {RegistrationState} from "./registration-state.enum";
+import {RegistrationState} from "../enums/registration-state.enum";
 
-export interface IUser {
+export interface User {
   id?: string;
   username: string;
   email: string;
