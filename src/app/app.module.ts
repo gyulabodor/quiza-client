@@ -11,6 +11,7 @@ import { MatButtonModule } from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
 import { NotExistingPageComponent } from './pages/not-existing-page/not-existing-page.component';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
+import {provideClientHydration} from "@angular/platform-browser";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
     MatButtonModule,
     MatMenuModule,
   ],
-  providers: [],
+  providers: [provideClientHydration()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
