@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import {AuthRoutingModule} from "./auth-routing.module";
 import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import {HttpClientModule} from "@angular/common/http";
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     AuthRoutingModule,
     HttpClientModule,
   ]
