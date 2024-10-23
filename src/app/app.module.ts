@@ -11,6 +11,7 @@ import { MatButtonModule } from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
 import { NotExistingPageComponent } from './pages/not-existing-page/not-existing-page.component';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
+import { QuizBoardComponent } from './quiz/components/quiz-board/quiz-board.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { WelcomePageComponent } from './pages/welcome-page/welcome-page.componen
     HeaderComponent,
     NotExistingPageComponent,
     WelcomePageComponent,
+    QuizBoardComponent,
   ],
   imports: [
     AppRoutingModule,
