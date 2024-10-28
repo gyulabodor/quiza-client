@@ -15,6 +15,11 @@ const routes: Routes = [
     path: 'sign-up',
     loadChildren: () =>
       import('./auth/auth.module').then((m) => m.AuthModule)
+  },
+  {
+    path: 'select-difficult',
+    loadChildren: () =>
+      import(('./quiz/models/quiz.module')).then((m) => m.QuizModule)
   }
 ];
 
