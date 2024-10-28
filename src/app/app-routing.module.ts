@@ -15,13 +15,7 @@ const routes: Routes = [
     path: 'sign-up',
     loadChildren: () =>
       import('./auth/auth.module').then((m) => m.AuthModule)
-  },
-  {
-    path:'lobby',
-    loadChildren: () =>
-      import('./lobby/lobby.module').then((m) => m.LobbyModule)
   }
-
 ];
 
 @NgModule({

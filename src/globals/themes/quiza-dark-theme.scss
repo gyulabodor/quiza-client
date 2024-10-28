@@ -5,7 +5,7 @@ $quiza-dark-theme-primary-palette: mat.define-palette(mat.$cyan-palette,400);
 $quiza-dark-theme-secondary-palette:mat.get-color-from-palette(mat.$cyan-palette,'A200');
 $quiza-dark-theme-accent-palette: mat.define-palette(mat.$blue-palette,600);
 $quiza-dark-theme-warn-palette: mat.define-palette(mat.$red-palette,500);
-$quiza-dark-theme-background-color: mat.get-color-from-palette(mat.$grey-palette,900);
+$quiza-dark-theme-background-color: mat.get-color-from-palette(mat.$dark-theme-foreground-palette,900);
 $quiza-dark-theme-text-color: mat.get-contrast-color-from-palette(mat.$grey-palette,900);
 $quiza-dark-theme:mat.define-dark-theme((
   color:(
