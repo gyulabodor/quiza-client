@@ -1,4 +1,4 @@
-import {QuizTopic} from "../../../globals/enums/quiz-topic.enum";
+import {QuizTopic} from "../../shared/enums/quiz-topic.enum";
 
 export interface Topic{
   id?:number;

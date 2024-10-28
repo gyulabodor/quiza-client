@@ -1,5 +1,5 @@
-import {QuizTopic} from "../../../../globals/enums/quiz-topic.enum";
-import {DifficultyEnum} from "../../../../globals/enums/difficulty.enum";
+import {QuizTopic} from "../../../shared/enums/quiz-topic.enum";
+import {DifficultyEnum} from "../../../shared/enums/difficulty.enum";
 
 export interface QuestionRequest {
   topic: QuizTopic,

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {DifficultyEnum} from "../../../../globals/enums/difficulty.enum";
+import {DifficultyEnum} from "../../../shared/enums/difficulty.enum";
 import {BehaviorSubject} from "rxjs";
 
 @Component({
