@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LobbyPageComponent } from './lobby-page.component';
+import { QuizBoardComponent } from './quiz-board.component';
 
-describe('LobbyPageComponent', () => {
-  let component: LobbyPageComponent;
-  let fixture: ComponentFixture<LobbyPageComponent>;
+describe('QuizBoardComponent', () => {
+  let component: QuizBoardComponent;
+  let fixture: ComponentFixture<QuizBoardComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LobbyPageComponent]
+      declarations: [QuizBoardComponent]
     });
-    fixture = TestBed.createComponent(LobbyPageComponent);
+    fixture = TestBed.createComponent(QuizBoardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

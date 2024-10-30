@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@use 'src/globals/themes/quiza-dark-theme' as theme-dark;
+@use 'app/shared/globals/themes/quiza-dark-theme' as theme-dark;
 
 * {
   box-sizing: border-box;

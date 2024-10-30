@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {NotExistingPageComponent} from "./pages/not-existing-page/not-existing-page.component";
-import {WelcomePageComponent} from "./pages/welcome-page/welcome-page.component";
+import {NotExistingPageComponent} from "./shared/globals/pages/not-existing-page/not-existing-page.component";
+import {WelcomePageComponent} from "./shared/globals/pages/welcome-page/welcome-page.component";
 
 const routes: Routes = [
   { path:'', component: WelcomePageComponent },
@@ -17,11 +17,10 @@ const routes: Routes = [
       import('./auth/auth.module').then((m) => m.AuthModule)
   },
   {
-    path:'lobby',
+    path: 'select-difficult',
     loadChildren: () =>
-      import('./lobby/lobby.module').then((m) => m.LobbyModule)
+      import(('./quiz/models/quiz.module')).then((m) => m.QuizModule)
   }
-
 ];
 
 @NgModule({

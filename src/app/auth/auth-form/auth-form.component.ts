@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {User} from "../../../globals/entities/user.model";
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {User} from "../../shared/globals/entities/user.model";
 
 @Component({
   selector: 'app-auth-form',
