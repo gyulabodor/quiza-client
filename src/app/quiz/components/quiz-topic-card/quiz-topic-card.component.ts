@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {QuizTopic} from "../../models/quiz-topic.model";
 import {BehaviorSubject} from "rxjs";
-import {ProgressCardState} from 'src/app/shared/globals/enums/view-control-state.enum';
+import {ProgressCardState} from 'src/app/shared/globals/enums/progress-card-state.enum';
 
 @Component({
   selector: 'quiz-topic-card',
