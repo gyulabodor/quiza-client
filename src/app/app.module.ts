@@ -11,9 +11,10 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatMenuModule } from "@angular/material/menu";
 import { NotExistingPageComponent } from './shared/globals/pages/not-existing-page/not-existing-page.component';
 import { WelcomePageComponent } from './shared/globals/pages/welcome-page/welcome-page.component';
-import { QuizBoardComponent } from './quiz/components/quiz-board/quiz-board.component';
-import { DifficultySelectorComponent } from './quiz/components/difficulty-selector/difficulty-selector.component';
 import { MatListModule } from "@angular/material/list";
+import {SharedModule} from "./shared/shared.module";
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -21,17 +22,18 @@ import { MatListModule } from "@angular/material/list";
     HeaderComponent,
     NotExistingPageComponent,
     WelcomePageComponent,
-    QuizBoardComponent,
-    DifficultySelectorComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
+    SharedModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MatListModule
+    MatListModule,
+    MatExpansionModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
