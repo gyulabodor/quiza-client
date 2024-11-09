@@ -1,7 +1,7 @@
-import {QuizTopic} from "../../../shared/enums/quiz-topic.enum";
-import {DifficultyEnum} from "../../../shared/enums/difficulty.enum";
+import {DifficultyLevel} from "../difficulty-level.model";
+import {QuizTopic} from "../quiz-topic.model";
 
 export interface QuestionRequest {
   topic: QuizTopic,
-  difficulty: DifficultyEnum
+  difficulty: DifficultyLevel
 }
