@@ -1,0 +1,15 @@
+:host{
+  mat-card{
+    border-radius: 0;
+    height: 100vh;
+    min-height: 100%;
+background: #30443c;
+    color: white;
+  }
+
+  mat-card-content{
+    height: 20vh;
+    text-align: center;
+    width: 100%;
+  }
+}

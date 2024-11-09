@@ -5,7 +5,7 @@ import {WelcomePageComponent} from "./shared/globals/pages/welcome-page/welcome-
 
 const routes: Routes = [
   { path:'', component: WelcomePageComponent },
-  { path:'**', component: NotExistingPageComponent },
+
   {
     path: 'login',
     loadChildren: () =>
@@ -17,10 +17,11 @@ const routes: Routes = [
       import('./auth/auth.module').then((m) => m.AuthModule)
   },
   {
-    path: 'select-difficult',
+    path: 'quiz',
     loadChildren: () =>
-      import(('./quiz/models/quiz.module')).then((m) => m.QuizModule)
-  }
+      import('./quiz/quiz.module').then((m) => m.QuizModule)
+  },
+  { path:'**', component: NotExistingPageComponent },
 ];
 
 @NgModule({

@@ -1,7 +1,14 @@
 <header>
   <mat-toolbar class="">
-    <button mat-icon-button class="example-icon" aria-label="">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="" >
       <mat-icon>menu</mat-icon>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let page of pages$ | async">
+          <a routerLink="{{page.url}}"><mat-icon>notes</mat-icon>
+          <span>{{ page.name }}</span>
+          </a>
+        </button>
+      </mat-menu>
     </button>
     <span>Quiza</span>
     <span class="example-spacer"></span>
