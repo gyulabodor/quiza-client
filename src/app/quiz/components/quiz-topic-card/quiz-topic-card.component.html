@@ -1,0 +1,27 @@
+<mat-card class="topic-card" [ngSwitch]="state">
+
+  <ng-container *ngSwitchCase="ProgressCardState.INIT_TO_GENERATE">
+    <mat-card-title>
+      <mat-icon class="topic-card-start-icon">question_mark</mat-icon>
+    </mat-card-title>
+    <button mat-button class="topic-card-start-button" (click)="startTopicRandomization()">start</button>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="ProgressCardState.GENERATE">
+    <mat-card-title>Topic Card</mat-card-title>
+    <mat-card-content>
+      <mat-spinner></mat-spinner>
+    </mat-card-content>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="ProgressCardState.SHOW_CONTENT">
+    <mat-card-content *ngIf="topicName$ | async as topicName">
+      <mat-icon class="topic-card-result-icon">lightbulb_2</mat-icon>
+      <p class="topic-name-p">{{topicName}}</p>
+    </mat-card-content>
+
+
+  </ng-container>
+</mat-card>
+
+
