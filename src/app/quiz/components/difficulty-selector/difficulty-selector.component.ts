@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {DifficultyEnum} from "../../../shared/enums/difficulty.enum";
-import {BehaviorSubject} from "rxjs";
+import {DIFFICULTY_LEVELS} from "../../constants/difficulty-levels";
+import {DifficultyLevel} from "../../models/difficulty-level.model";
+import {QuizService} from "../../services/quiz.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-difficulty-selector',
@@ -9,13 +11,15 @@ import {BehaviorSubject} from "rxjs";
 })
 export class DifficultySelectorComponent implements OnInit {
 
-  public selectedDifficulty$?: BehaviorSubject<DifficultyEnum>;
-
+  constructor(private quizService: QuizService,
+              private router: Router) {}
   ngOnInit(): void {
-    this.selectedDifficulty$ = new BehaviorSubject<DifficultyEnum>(DifficultyEnum.EASY);
-  }
-
-  public registerOnChanges(): void {
 
   }
+
+  public submitDifficultyAndNavigate(chosenDifficulty: DifficultyLevel): void {
+    this.quizService.registerDifficultyLevel(chosenDifficulty)
+    this.router.navigateByUrl('/quiz/topic');
+  }
+  protected readonly DIFFICULTY_LEVELS = DIFFICULTY_LEVELS;
 }
