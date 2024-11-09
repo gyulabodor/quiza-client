@@ -10,13 +10,16 @@ import {MatListModule} from "@angular/material/list";
 import {MatCardModule} from "@angular/material/card";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatIconModule} from "@angular/material/icon";
+import {QuizTopicComponent} from "./components/quiz-topic/quiz-topic.component";
+import {QuizTopicCardComponent} from "./components/quiz-topic-card/quiz-topic-card.component";
 
 
 
 @NgModule({
   declarations: [
     DifficultySelectorComponent,
-
+    QuizTopicComponent,
+    QuizTopicCardComponent
   ],
   imports: [
     CommonModule,
