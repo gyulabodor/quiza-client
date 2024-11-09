@@ -5,7 +5,7 @@ import {DifficultyLevel} from "../../models/difficulty-level.model";
 import {QuizTopic} from "../../models/quiz-topic.model";
 import {QUIZ_TOPIC_LIST} from "../../constants/quiz-topics";
 import {Topic} from "../../../shared/globals/enums/topic.enum";
-import {ProgressCardState} from "../../../shared/globals/enums/view-control-state.enum";
+import {ProgressCardState} from "../../../shared/globals/enums/progress-card-state.enum";
 
 @Component({
   selector: 'app-quiz-topic',
