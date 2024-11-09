@@ -1,21 +1,36 @@
-@use '../../../../../node_modules/@angular/material/index' as mat;
-@include mat.core();
+  @use '@angular/material' as mat;
 
-$quiza-dark-theme-primary-palette: mat.define-palette(mat.$cyan-palette,400);
-$quiza-dark-theme-secondary-palette:mat.get-color-from-palette(mat.$cyan-palette,'A200');
-$quiza-dark-theme-accent-palette: mat.define-palette(mat.$blue-palette,600);
-$quiza-dark-theme-warn-palette: mat.define-palette(mat.$red-palette,500);
-$quiza-dark-theme-background-color: mat.get-color-from-palette(mat.$dark-theme-foreground-palette,900);
-$quiza-dark-theme-text-color: mat.get-contrast-color-from-palette(mat.$grey-palette,900);
-$quiza-dark-theme:mat.define-dark-theme((
-  color:(
-    theme-type: dark,
-    primary: $quiza-dark-theme-primary-palette,
-    secondary:$quiza-dark-theme-secondary-palette,
-    accent: $quiza-dark-theme-accent-palette,
-    warn: $quiza-dark-theme-warn-palette,
-  ),
-  density: 0
-));
 
-@include mat.all-component-themes($quiza-dark-theme);
+  $quiza-dark-theme-primary-palette: mat.define-palette(mat.$cyan-palette,400);
+  $quiza-dark-theme-secondary-palette:mat.get-color-from-palette(mat.$cyan-palette,'A200');
+  $quiza-dark-theme-accent-palette: mat.define-palette(mat.$blue-palette,600);
+  $quiza-dark-theme-warn-palette: mat.define-palette(mat.$red-palette,500);
+  $quiza-dark-theme-button-background-color: mat.get-color-from-palette(mat.$cyan-palette,600);
+  $quiza-dark-theme-start-button-background-color: mat.get-color-from-palette(mat.$red-palette,400);
+  $quiza-dark-theme-background-color: mat.get-color-from-palette(mat.$cyan-palette,600);
+  $quiza-dark-theme-text-color: mat.get-contrast-color-from-palette(mat.$grey-palette,900);
+  $quiza-dark-theme:mat.define-dark-theme((
+    color:(
+      theme-type: dark,
+      primary: $quiza-dark-theme-primary-palette,
+      secondary:$quiza-dark-theme-secondary-palette,
+      accent: $quiza-dark-theme-accent-palette,
+      warn: $quiza-dark-theme-warn-palette,
+    ),
+    density: 0,
+
+  ));
+  .mat-tab-group{
+    background-color: $quiza-dark-theme-background-color;
+    height: 100%;
+  }
+  .dark-bg-color{
+    background-color: $quiza-dark-theme-background-color;
+  }
+  .mat-button, .mat-raised-button, .mat-icon-button, .mat-fab, .mat-mini-fab {
+    background-color: $quiza-dark-theme-start-button-background-color !important;
+    color: $quiza-dark-theme-text-color !important;
+  }
+
+  @include mat.core();
+  @include mat.all-component-themes($quiza-dark-theme);

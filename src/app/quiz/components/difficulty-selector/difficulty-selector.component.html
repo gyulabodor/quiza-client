@@ -1,1 +1,13 @@
-<mobile-header></mobile-header>
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+  <mat-tab label="Select Quiz Difficulty">
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let difficult of DIFFICULTY_LEVELS">
+        <button (click)="submitDifficultyAndNavigate(difficult)"
+                class="difficulty-button"
+                mat-button color="primary">
+          {{difficult.name}}
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-tab>
+</mat-tab-group>
