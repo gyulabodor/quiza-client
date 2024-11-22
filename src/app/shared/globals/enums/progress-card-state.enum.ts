@@ -1,5 +1,0 @@
-export enum ProgressCardState {
-  INIT_TO_GENERATE="INIT_TO_GENERATE",
-  GENERATE = "GENERATE",
-  SHOW_CONTENT = "SHOW_CONTENT",
-}
